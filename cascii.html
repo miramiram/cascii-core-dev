@@ -584,8 +584,8 @@ limitations under the License.
         "━": ["solid-bold", "line", "lateral", "unicode"],
         "┃": ["solid-bold", "line", "vertical", "unicode"],
         "|": ["solid-thin", "solid-bold", "line", "vertical", "ascii"],
-        "─": ["solid-thin", "line", "lateral", "unicode"],
-        "│": ["solid-thin", "line", "vertical", "unicode"],
+        "─": ["solid-thin", "solid-rounded", "line", "lateral", "unicode"],
+        "│": ["solid-thin", "solid-rounded", "line", "vertical", "unicode"],
         "\\": ["solid-thin", "solid-bold", "diag-back", "line", "unicode", "ascii"],
         "/": ["solid-thin", "solid-bold", "diag-forward", "line", "unicode", "ascii"],
 
@@ -615,6 +615,11 @@ limitations under the License.
         "┐": ["corner", "dashed", "solid-thin", "top-right", "unicode"],
         "└": ["corner", "dashed", "solid-thin", "bottom-left", "unicode"],
         "┘": ["corner", "dashed", "solid-thin", "bottom-right", "unicode"],
+
+        "╭": ["corner", "solid-rounded","top-left", "unicode"],
+        "╮": ["corner", "solid-rounded","top-right", "unicode"],
+        "╰": ["corner", "solid-rounded","bottom-left", "unicode"],
+        "╯": ["corner", "solid-rounded","bottom-right", "unicode"],
 
         "·": ["diamond-corner", "solid-thin", "solid-bold", "vertical", "lateral", "unicode"],
 
@@ -4937,6 +4942,9 @@ limitations under the License.
         ),
         new MenuButtonLeftComponent("―", "Solid bold", [modeMaster.has, "selected", "line-based"], [], [], () =>
           layerManager.redrawLineBasedEvent("solid-bold")
+        ),
+        new MenuButtonLeftComponent("╮", "Solid rounded", [modeMaster.has, "selected", "line-based"], [], [], () =>
+          layerManager.redrawLineBasedEvent("solid-rounded")
         ),
       ];
 
